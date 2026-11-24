@@ -1,0 +1,148 @@
+{
+  "files": {
+    "fat-tree-l_1.xml": {
+      "contracted_edges": 18,
+      "contracted_vertices": 17,
+      "validators": 10
+    },
+    "fat-tree-l_4.xml": {
+      "contracted_edges": 18,
+      "contracted_vertices": 17,
+      "validators": 40
+    },
+    "full-mesh_1.xml": {
+      "contracted_edges": 45,
+      "contracted_vertices": 10,
+      "validators": 10
+    },
+    "full-mesh_4.xml": {
+      "contracted_edges": 45,
+      "contracted_vertices": 10,
+      "validators": 40
+    },
+    "hypercube_1.xml": {
+      "contracted_edges": 25,
+      "contracted_vertices": 10,
+      "validators": 10
+    },
+    "hypercube_4.xml": {
+      "contracted_edges": 25,
+      "contracted_vertices": 10,
+      "validators": 40
+    },
+    "scale-free-l_1.xml": {
+      "contracted_edges": 9,
+      "contracted_vertices": 10,
+      "validators": 10
+    },
+    "scale-free-l_4.xml": {
+      "contracted_edges": 9,
+      "contracted_vertices": 10,
+      "validators": 40
+    },
+    "torus-l_1.xml": {
+      "contracted_edges": 19,
+      "contracted_vertices": 10,
+      "validators": 10
+    },
+    "torus-l_4.xml": {
+      "contracted_edges": 19,
+      "contracted_vertices": 10,
+      "validators": 40
+    }
+  },
+  "method": {
+    "contracted": "numbered s<N> hop-emulation bridges",
+    "excluded": "workload-service endpoint leaves",
+    "graph": "undirected simple contracted overlay",
+    "path_diversity": "mean unit-capacity edge-disjoint paths over unordered vertex pairs",
+    "retained": "regional and structural branching bridges"
+  },
+  "metrics": [
+    {
+      "average_pairwise_edge_disjoint_paths": 1.0808823529411764,
+      "average_shortest_path": 2.9558823529411766,
+      "degree_max": 4,
+      "degree_median": 1.0,
+      "degree_min": 1,
+      "diameter": 6,
+      "edge_connectivity": 1,
+      "edges": 18,
+      "topology": "Fat-tree",
+      "validator_sizes": "10/40",
+      "vertices": 17
+    },
+    {
+      "average_pairwise_edge_disjoint_paths": 9.0,
+      "average_shortest_path": 1.0,
+      "degree_max": 9,
+      "degree_median": 9.0,
+      "degree_min": 9,
+      "diameter": 1,
+      "edge_connectivity": 9,
+      "edges": 45,
+      "topology": "Full mesh",
+      "validator_sizes": "10/40",
+      "vertices": 10
+    },
+    {
+      "average_pairwise_edge_disjoint_paths": 4.644444444444445,
+      "average_shortest_path": 1.4444444444444444,
+      "degree_max": 6,
+      "degree_median": 5.0,
+      "degree_min": 4,
+      "diameter": 2,
+      "edge_connectivity": 4,
+      "edges": 25,
+      "topology": "Hypercube",
+      "validator_sizes": "10/40",
+      "vertices": 10
+    },
+    {
+      "average_pairwise_edge_disjoint_paths": 1.0,
+      "average_shortest_path": 2.7111111111111112,
+      "degree_max": 3,
+      "degree_median": 1.5,
+      "degree_min": 1,
+      "diameter": 5,
+      "edge_connectivity": 1,
+      "edges": 9,
+      "topology": "Scale-free",
+      "validator_sizes": "10/40",
+      "vertices": 10
+    },
+    {
+      "average_pairwise_edge_disjoint_paths": 3.0444444444444443,
+      "average_shortest_path": 1.6444444444444444,
+      "degree_max": 7,
+      "degree_median": 3.5,
+      "degree_min": 2,
+      "diameter": 3,
+      "edge_connectivity": 2,
+      "edges": 19,
+      "topology": "Torus",
+      "validator_sizes": "10/40",
+      "vertices": 10
+    }
+  ],
+  "provenance": {
+    "commands": [
+      "python3 scripts/gen_topo.py --secondaries 10 --nodes 1 --bandwidth 1 --type fat-tree-l --strategy hop --dataset diablo --dynamic 0 --blockchain poa",
+      "python3 scripts/gen_topo.py --secondaries 10 --nodes 4 --bandwidth 1 --type fat-tree-l --strategy hop --dataset diablo --dynamic 0 --blockchain poa",
+      "python3 scripts/gen_topo.py --secondaries 10 --nodes 1 --bandwidth 1 --type full-mesh --strategy hop --dataset diablo --dynamic 0 --blockchain poa",
+      "python3 scripts/gen_topo.py --secondaries 10 --nodes 4 --bandwidth 1 --type full-mesh --strategy hop --dataset diablo --dynamic 0 --blockchain poa",
+      "python3 scripts/gen_topo.py --secondaries 10 --nodes 1 --bandwidth 1 --type hypercube --strategy hop --dataset diablo --dynamic 0 --blockchain poa",
+      "python3 scripts/gen_topo.py --secondaries 10 --nodes 4 --bandwidth 1 --type hypercube --strategy hop --dataset diablo --dynamic 0 --blockchain poa",
+      "python3 scripts/gen_topo.py --secondaries 10 --nodes 1 --bandwidth 1 --type scale-free-l --strategy hop --dataset diablo --dynamic 0 --blockchain poa",
+      "python3 scripts/gen_topo.py --secondaries 10 --nodes 4 --bandwidth 1 --type scale-free-l --strategy hop --dataset diablo --dynamic 0 --blockchain poa",
+      "python3 scripts/gen_topo.py --secondaries 10 --nodes 1 --bandwidth 1 --type torus-l --strategy hop --dataset diablo --dynamic 0 --blockchain poa",
+      "python3 scripts/gen_topo.py --secondaries 10 --nodes 4 --bandwidth 1 --type torus-l --strategy hop --dataset diablo --dynamic 0 --blockchain poa"
+    ],
+    "generator_path": "scripts/gen_topo.py",
+    "lilith_commit": "dd1d457c6079661b158f601cdf70817cbe2a5f2a",
+    "lilith_repository": "https://github.com/vindipe/lilith",
+    "template_path": "misc/sample-topology.xml",
+    "trace_path": "misc/diablo-aws.csv",
+    "verified_instances": 10
+  }
+}
